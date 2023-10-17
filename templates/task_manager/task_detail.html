@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>
+    {{ task.name }}
+    <a href="{% url 'task_manager:task-delete' pk=task.id %}" class="btn btn-danger link-to-page">
+      Delete
+    </a>
+
+    <a href="{% url 'task_manager:task-update' pk=task.id %}" class="btn btn-secondary link-to-page">
+      Update
+    </a>
+  </h1>
+  <p><strong>Type:</strong> ({{ task.task_type.name }})</p>
+  <p><strong>Description: </strong>{{ task.description }}</p>
+  <p><strong>Deadline: </strong>{{ task.deadline }}</p>
+  <p><strong>Priority: </strong>{{ task.priority }}</p>
+  <p><strong>Is completed: </strong>{{ task.is_completed}}</p>
+  <h1>
+    Assignees
+
+    {% if task in user.tasks.all %}
+      <a href="{% url 'task_manager:toggle-task-assign' pk=task.id %}" class="btn btn-danger link-to-page">
+        Refuse the task
+      </a>
+    {% else %}
+      <a href="{% url 'task_manager:toggle-task-assign' pk=task.id %}" class="btn btn-success link-to-page">
+        Take this task
+      </a>
+    {% endif %}
+
+  </h1>
+  <hr>
+  <ul>
+    {% for worker in task.assignees.all %}
+      <li>{{ worker.username }} ({{ worker.first_name }} {{ worker.last_name }})</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

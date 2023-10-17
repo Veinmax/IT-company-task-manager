@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+{#{% load crispy_forms_filters %}#}
+
+{% block content %}
+    <h1>
+      Position List
+      <a href="{% url 'task_manager:position-create' %}" class="btn btn-primary link-to-page">
+        Create
+      </a>
+    </h1>
+{#    {% include "taxi/search_form.html" %}#}
+
+    {% if position_list %}
+    <table class="table">
+      <tr>
+        <th>Name</th>
+        <th>Delete</th>
+      </tr>
+    {% for position in position_list %}
+      <tr>
+        <td>{{ position.name }}</td>
+        <td>
+          <a class="btn btn-danger"
+             href="{% url 'task_manager:position-delete' pk=position.id %}">
+            Delete
+          </a>
+        </td>
+      </tr>
+    {% endfor %}
+
+    </table>
+    {% else %}
+      <p>There are no positions in the manager.</p>
+    {% endif %}
+{% endblock %}
