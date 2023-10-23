@@ -38,15 +38,15 @@ class Task(models.Model):
     deadline = models.DateField()
     is_completed = models.BooleanField(default=False)
     PRIORITY_CHOICES = [
-        ("URGENT", "Urgent"),
-        ("HIGH", "High"),
-        ("MEDIUM", "Medium"),
-        ("LOW", "Low"),
+        ("Urgent", "URGENT"),
+        ("High", "HIGH"),
+        ("Medium", "MEDIUM"),
+        ("Low", "LOW"),
     ]
     priority = models.CharField(
         max_length=6,
         choices=PRIORITY_CHOICES,
-        default="LOW"
+        default="Low"
     )
     task_type = models.ForeignKey(TaskType, on_delete=models.CASCADE)
     assignees = models.ManyToManyField(
