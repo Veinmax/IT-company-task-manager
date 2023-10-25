@@ -83,4 +83,3 @@ class ModelsTests(TestCase):
             task.priority,
             priority
         )
-
