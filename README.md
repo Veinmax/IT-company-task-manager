@@ -53,6 +53,9 @@ python manage.py migrate
 ```bash
 python manage.py loaddata my_data.json
 ```
+- After loading data from fixture you can use following superuser (or create another one by yourself):
+  - Login: `admin.user`
+  - Password: `1qazcde3`
 
 8. Run the Server:
 ```bash
