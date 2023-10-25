@@ -1,0 +1,59 @@
+{% extends "layouts/base-presentation.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <style>
+    .page-header {
+      padding: 300px;
+    }
+  </style>
+  <div class="page-header section-height-100 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/background3.jpg')">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <div class="row">
+            <h1>
+              List of Tasks
+            </h1>
+            {% include "task_manager/search_form.html" %}
+
+            {% if task_list %}
+            <table class="table">
+              <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Type</th>
+                <th>Is_completed</th>
+                <th>Priority</th>
+                <th>Deadline</th>
+                <th>Assignees</th>
+              </tr>
+            {% for task in task_list %}
+              <tr>
+                <td>{{ task.id }}</td>
+                {% if task.is_completed %}
+                  <td><i><s><a href="{% url 'task_manager:task-detail' pk=task.id %}">{{ task.name }}</a></s></i></td>
+                  {% else %}
+                    <td><a href="{% url 'task_manager:task-detail' pk=task.id %}">{{ task.name }}</a></td>
+                {% endif %}
+                <td>{{ task.task_type }}</td>
+                <td>{{ task.is_completed }}</td>
+                <td>{{ task.priority }}</td>
+                <td>{{ task.deadline }}</td>
+                <td>{{ task.assignees.count }}</td>
+              </tr>
+            {% endfor %}
+
+            </table>
+            {% block pagination %}
+              {% include 'includes/pagination.html' %}
+            {% endblock %}
+            {% else %}
+              <p>There are no tasks in the manager.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

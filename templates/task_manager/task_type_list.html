@@ -1,0 +1,52 @@
+{% extends "layouts/base-presentation.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <style>
+    .page-header {
+      padding: 300px;
+    }
+  </style>
+  <div class="page-header section-height-100 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/background4.jpg')">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <div class="row">
+            <h1>
+              List of Task Types
+              <a href="{% url 'task_manager:task-type-create' %}" class="btn btn-primary link-to-page">
+                Create
+              </a>
+            </h1>
+
+            {% if task_type_list %}
+            <table class="table">
+              <tr>
+                <th>Name</th>
+                <th>Delete</th>
+              </tr>
+            {% for task in task_type_list %}
+              <tr>
+                <td>{{ task.name }}</td>
+                <td>
+                  <a class="btn btn-danger"
+                     href="{% url 'task_manager:task-type-delete' pk=task.id %}">
+                    Delete
+                  </a>
+                </td>
+              </tr>
+            {% endfor %}
+
+            </table>
+            {% block pagination %}
+              {% include 'includes/pagination.html' %}
+            {% endblock %}
+            {% else %}
+              <p>There are no task types in the manager.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block content %}
+  <div class="page-header section-height-100 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/background.jpg')">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-12 col-md-6">
+          <div class="card">
+            <div class="card-header text-center">
+              <h1>Logged out!</h1>
+            </div>
+            <div class="card-body text-center">
+              <p>You have been logged out.</p>
+              <a href="{% url 'login' %}" class="btn btn-primary">
+                Click here to login again.
+              </a>
+            </div>
+            <div class="card-footer text-center">
+              <p>Copyright &copy; 2023</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

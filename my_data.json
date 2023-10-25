@@ -1,0 +1,347 @@
+[
+{
+  "model": "task_manager.position",
+  "pk": 1,
+  "fields": {
+    "name": "Developer"
+  }
+},
+{
+  "model": "task_manager.position",
+  "pk": 2,
+  "fields": {
+    "name": "DevOps"
+  }
+},
+{
+  "model": "task_manager.position",
+  "pk": 3,
+  "fields": {
+    "name": "QA"
+  }
+},
+{
+  "model": "task_manager.position",
+  "pk": 6,
+  "fields": {
+    "name": "Project Manager"
+  }
+},
+{
+  "model": "task_manager.position",
+  "pk": 7,
+  "fields": {
+    "name": "Designer"
+  }
+},
+{
+  "model": "task_manager.position",
+  "pk": 8,
+  "fields": {
+    "name": "Game Tester"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 1,
+  "fields": {
+    "name": "Bug"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 2,
+  "fields": {
+    "name": "QA"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 3,
+  "fields": {
+    "name": "Breaking change"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 4,
+  "fields": {
+    "name": "New feature"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 5,
+  "fields": {
+    "name": "Refactoring"
+  }
+},
+{
+  "model": "task_manager.tasktype",
+  "pk": 7,
+  "fields": {
+    "name": "Testing games"
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$vQvctv2iIpjcypZr3sSjw9$TWtnC6yl8AgRyO8xRSfS1H9/9yS0ZchU9IxPoOeGbFg=",
+    "last_login": "2023-10-25T10:18:04.459Z",
+    "is_superuser": true,
+    "username": "admin.user",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin@admin.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-10-13T11:47:51.431Z",
+    "position": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 2,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$JipHNT3hM6Xs2QNAOKouGo$IJl4R/g4ycaOv8XZg1jJPIUIz1rUQZ7eiUHc3m5yqJs=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "joyce.byers",
+    "first_name": "Joyce",
+    "last_name": "Byers",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T11:55:44.114Z",
+    "position": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 3,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$20nbI6F5sSqhusMxqVpFIy$g+GK0GSOjuu+AiU2qZkMKn7QE77gT9vl/tC8KMVo2Fk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jim.hopper",
+    "first_name": "Jim",
+    "last_name": "Hopper",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T11:56:46.916Z",
+    "position": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$xAIBEN6JCr4HKv9Mxnlmhn$baVG0xx/dX17icptKVXUYbyLYVZQp4/EpUksOOgq9+4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "jonathan.byers",
+    "first_name": "Jonathan",
+    "last_name": "Byers",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T12:12:42.960Z",
+    "position": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 5,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$aHTgh3ftGWU5IhLkUaDb5n$ftqz09Ml4hKMhChIBXJVsl6SX/Wvg4TuFxzS96/4g9Y=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "dustin.henderson",
+    "first_name": "Dustin",
+    "last_name": "Henderson",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T12:13:17.959Z",
+    "position": 1,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$eXjocPuSoNWUe00DCbwFYR$7IIIdyGO6kch6oiV6IePneUCwiND0CLH8nqtdEF4DUk=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "lucas.sinclair",
+    "first_name": "Lucas",
+    "last_name": "Sinclair",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T12:16:35.843Z",
+    "position": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.worker",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$skwfMYqlq70Z7uIVgsqvrb$nmNxn3mRvzu3Oy204SLnCPQz7+wjMZOgNJtCOUdc8MI=",
+    "last_login": "2023-10-17T13:09:44.055Z",
+    "is_superuser": false,
+    "username": "nancy.wheeler",
+    "first_name": "Nancy",
+    "last_name": "Wheeler",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-13T14:40:48.273Z",
+    "position": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 1,
+  "fields": {
+    "name": "Fix bugs with border",
+    "description": "Fix bugs related to the handling of borders in the application's code.",
+    "deadline": "2023-10-21",
+    "is_completed": false,
+    "priority": "MEDIUM",
+    "task_type": 1,
+    "assignees": [
+      1,
+      3
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 2,
+  "fields": {
+    "name": "Add Google sign-in button",
+    "description": "Add a button to the user interface that allows users to sign in to the application using their Google account.",
+    "deadline": "2023-10-17",
+    "is_completed": true,
+    "priority": "HIGH",
+    "task_type": 4,
+    "assignees": [
+      1,
+      2
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 3,
+  "fields": {
+    "name": "Verify login page functionality",
+    "description": "Verify that the new login page works correctly.",
+    "deadline": "2023-10-23",
+    "is_completed": false,
+    "priority": "URGENT",
+    "task_type": 2,
+    "assignees": [
+      1,
+      4,
+      8
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 4,
+  "fields": {
+    "name": "Performance testing",
+    "description": "Check the performance of the application under load.",
+    "deadline": "2023-10-17",
+    "is_completed": true,
+    "priority": "Urgent",
+    "task_type": 2,
+    "assignees": [
+      7,
+      8
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 5,
+  "fields": {
+    "name": "Update the application's database schema.",
+    "description": "Make changes to the application's database schema to support a new feature.",
+    "deadline": "2023-10-14",
+    "is_completed": true,
+    "priority": "LOW",
+    "task_type": 3,
+    "assignees": [
+      8
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 7,
+  "fields": {
+    "name": "Set up a new continuous integration (CI) pipeline",
+    "description": "Create a new CI pipeline that will automatically build and test code changes when they are pushed to the repository.",
+    "deadline": "2023-11-11",
+    "is_completed": false,
+    "priority": "Medium",
+    "task_type": 4,
+    "assignees": [
+      3,
+      4
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 8,
+  "fields": {
+    "name": "Deploy the new version of the application to production",
+    "description": "Promote the new version of the application from staging to production.",
+    "deadline": "2023-12-23",
+    "is_completed": false,
+    "priority": "High",
+    "task_type": 4,
+    "assignees": [
+      2,
+      5,
+      8
+    ]
+  }
+},
+{
+  "model": "task_manager.task",
+  "pk": 9,
+  "fields": {
+    "name": "Fix a bug that causes the application to crash",
+    "description": "Identify and fix the bug that is causing the application to crash.",
+    "deadline": "2023-11-19",
+    "is_completed": false,
+    "priority": "Urgent",
+    "task_type": 1,
+    "assignees": [
+      5
+    ]
+  }
+}
+]

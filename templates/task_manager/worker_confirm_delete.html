@@ -1,0 +1,25 @@
+{% extends "layouts/base-presentation.html" %}
+
+{% block content %}
+  <style>
+    .page-header {
+      padding: 300px;
+    }
+  </style>
+  <div class="page-header section-height-100 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/nastuh.jpg')">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <div class="row">
+            <h1>Delete the worker?</h1>
+            <form action="" method="post">
+              {% csrf_token %}
+
+              <input type="submit" value="Yes" class="btn btn-danger">
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

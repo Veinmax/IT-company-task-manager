@@ -1,0 +1,52 @@
+{% extends "layouts/base-presentation.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <style>
+    .page-header {
+      padding: 300px;
+    }
+  </style>
+  <div class="page-header section-height-100 relative" style="background-image: url('{{ ASSETS_ROOT }}/img/nastuh.jpg')">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-9 z-index-2 border-radius-xl mt-n10 mx-auto py-3 blur shadow-blur">
+          <div class="row">
+            <h1>
+              List of workers
+            </h1>
+
+            {% if worker_list %}
+            <table class="table">
+              <tr>
+                <th>ID</th>
+                <th>Username</th>
+                <th>First name</th>
+                <th>Last name</th>
+                <th>Position</th>
+                <th>Tasks</th>
+              </tr>
+            {% for worker in worker_list %}
+              <tr>
+                <td>{{ worker.id }}</td>
+                <td><a href="{{ worker.get_absolute_url }}">{{ worker.username }} {% if user == worker %}(Me)</a>{% endif %}</td>
+                <td>{{ worker.first_name }}</td>
+                <td>{{ worker.last_name }}</td>
+                <td>{{ worker.position }}</td>
+                <td>{{ worker.tasks.count }}</td>
+              </tr>
+            {% endfor %}
+
+            </table>
+            {% block pagination %}
+              {% include 'includes/pagination.html' %}
+            {% endblock %}
+            {% else %}
+              <p>There are no workers in the manager.</p>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
